@@ -1,12 +1,126 @@
-#buton {
-  background-color: pink;
-  border: none;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Dubai";
+}
+
+body {
+  background-color: rgb(110, 110, 110);
+  background-image: url("src/metal.png");
+}
+
+#container {
+  position: relative;
+  width: 900px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+#generateMenu {
+  background-color: rgba(234, 255, 245, 0.596);
+  box-shadow: -1px -1px 15px 5px rgb(154, 255, 154);
+  border: 3px dashed lime;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 20vh auto;
+  width: 600px;
+  height: 170px;
   padding: 20px;
+}
+
+#game {
+  background-color: rgba(234, 255, 245, 0.596);
+  box-shadow: -1px -1px 15px 5px rgb(154, 255, 154);
+  border: 3px dashed lime;
+  position: absolute;
+  top: 125px;
+  right: 0;
+  padding: 20px;
+
+  display: none;
+}
+
+#generatedGame {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 20px;
   color: white;
   font-weight: bold;
 }
 
+h1 {
+  color: white;
+  text-shadow: 0px 0px 10px lime;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  text-align: center;
+  font-size: 35px;
+  border-top: 3px dashed white;
+  border-bottom: 3px dashed white;
+  padding: 10px 0 10px 0;
+}
+
+#buton {
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 3px dashed rgb(255, 255, 255);
+  color: white;
+  padding: 10px 50px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 20px;
+
+  transition: 0.5s ease;
+}
+
 #buton:hover {
   cursor: pointer;
-  background-color: rgb(255, 213, 221);
+  background-color: rgb(125, 245, 125);
+  box-shadow: -1px -1px 15px 5px rgb(154, 255, 154);
+}
+
+#loader {
+  display: none;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+
+  border: 10px solid #7e7e7e;
+  border-radius: 50%;
+  border-top: 10px solid rgb(57, 255, 57);
+  box-shadow: -1px -1px 15px 5px rgb(159, 255, 150);
+  width: 30px;
+  height: 30px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

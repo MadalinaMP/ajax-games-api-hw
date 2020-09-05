@@ -3,12 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Game API</title>
     <link rel="stylesheet" href="Style/style.css" />
   </head>
   <body>
-    <h1>Display a random game!</h1>
-    <input type="button" value="Generate Game!" id="buton" />
+    <div id="loader"></div>
+    <div id="container">
+      <div id="generateMenu">
+        <h1>Display a random game!</h1>
+        <input type="button" value="Generate Game!" id="buton" />
+      </div>
+
+      <div id="game">
+        <h1>Here's your game:</h1>
+        <div id="generatedGame"></div>
+        <p id="forPic"></p>
+      </div>
+    </div>
     <script src="Script/games.js"></script>
   </body>
 </html>
