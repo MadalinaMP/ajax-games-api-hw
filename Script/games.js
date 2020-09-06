@@ -14,46 +14,29 @@ function getGame() {
     })
     .then(function (jsonResp) {
       console.log(jsonResp);
+
       games = jsonResp;
-
-      // for (var i = 0; i < games.length; i++) {
-      //   displayGame(games[i]);
-      // }
-
-      pickRandomGame();
+      for (var i = 0; i < games.length; i++) {
+        displayGame(games[i]);
+      }
     })
     .finally(hideLoader);
-}
-
-function pickRandomGame() {
-  var randomGame = games[Math.floor(Math.random() * games.length)];
-  displayGame(randomGame);
 }
 
 function displayGame(game) {
   var myGame = document.getElementById("generatedGame");
 
-  var forTitle = document.createElement("h3");
-  var forTitleTextNode = document.createTextNode("Title : ");
-  forTitle.appendChild(forTitleTextNode);
-  myGame.appendChild(forTitle);
-  forTitle.classList.add("styleKeys");
-
   var gameTitle = document.createElement("p");
   gameTitle.innerText = game.title;
-
-  var forDescription = document.createElement("h3");
-  var forDescriptionTextNode = document.createTextNode("Description : ");
-  forDescription.appendChild(forDescriptionTextNode);
-  myGame.appendChild(forDescription);
-  forDescription.classList.add("styleKeys");
+  gameTitle.classList.add("titleStyle");
 
   var gameDescription = document.createElement("p");
-  gameDescription.innerText = "Description : \n" + game.description;
+  gameDescription.innerText = game.description;
+  gameDescription.classList.add("descriptionStyle");
 
   var gameImg = document.createElement("img");
   gameImg.src = game.imageUrl;
-  gameImg.classList.add("imgSize");
+  gameImg.classList.add("imgStyle");
 
   myGame.appendChild(gameTitle);
   myGame.appendChild(gameDescription);

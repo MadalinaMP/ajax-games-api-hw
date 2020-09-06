@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   font-family: "Dubai";
+  color: white;
 }
 
 body {
@@ -9,39 +10,37 @@ body {
   background-image: url("src/metal.png");
 }
 
-#container {
-  position: relative;
-  width: 900px;
+.centering {
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+#container {
+  width: 900px;
+  position: relative;
   margin: auto;
 }
 
-#generateMenu {
+.divStyle {
   background-color: rgba(234, 255, 245, 0.596);
   box-shadow: -1px -1px 15px 5px rgb(154, 255, 154);
   border: 3px dashed lime;
-  position: relative;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: 20vh auto;
-  width: 600px;
-  height: 170px;
   padding: 20px;
 }
 
+#generateMenu {
+  position: relative;
+  margin: 20vh auto;
+  width: 600px;
+  height: 170px;
+}
+
 #game {
-  background-color: rgba(234, 255, 245, 0.596);
-  box-shadow: -1px -1px 15px 5px rgb(154, 255, 154);
-  border: 3px dashed lime;
   position: absolute;
   top: 125px;
   right: 0;
-  padding: 20px;
   width: 450px;
   margin-bottom: 210px;
 
@@ -51,17 +50,14 @@ body {
 #generatedGame {
   margin-top: 20px;
   text-align: center;
-  font-size: 15px;
-  color: white;
 }
 
 h1 {
-  color: white;
   text-shadow: 0px 0px 10px lime;
   text-transform: uppercase;
   letter-spacing: 7px;
   text-align: center;
-  font-size: 35px;
+  font-size: 33px;
   border-top: 3px dashed white;
   border-bottom: 3px dashed white;
   padding: 10px 0 10px 0;
@@ -71,7 +67,6 @@ h1 {
   font-size: 20px;
   background-color: rgba(255, 255, 255, 0);
   border: 3px dashed rgb(255, 255, 255);
-  color: white;
   padding: 10px 50px;
   font-weight: bold;
   position: absolute;
@@ -90,24 +85,20 @@ h1 {
   display: none;
 
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   margin: auto;
   z-index: 1;
 
-  border: 10px solid #7e7e7e;
+  border: 10px solid rgb(126, 126, 126);
   border-radius: 50%;
   border-top: 10px solid rgb(57, 255, 57);
   box-shadow: -1px -1px 15px 5px rgb(159, 255, 150);
   width: 30px;
   height: 30px;
-  -webkit-animation: spin 2s linear infinite; /* Safari */
+
+  -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
 }
 
-/* Safari */
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
@@ -126,13 +117,22 @@ h1 {
   }
 }
 
-.styleKeys {
-  color: rgb(255, 255, 255);
+.titleStyle {
+  font-size: 20px;
+  font-weight: bold;
   text-shadow: 0px 0px 5px lime;
   text-decoration: underline;
+  margin-bottom: 15px;
 }
 
-.imgSize {
+.descriptionStyle {
+  font-size: 15px;
+  font-weight: bold;
+  text-align: justify;
+  line-height: 16px;
+}
+
+.imgStyle {
   width: 400px;
-  margin-top: 10px;
+  margin: 30px 0px 10px 0px;
 }
